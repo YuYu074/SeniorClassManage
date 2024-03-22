@@ -1,0 +1,71 @@
+<!DOCTYPE htm>
+<html lang="en">
+<head >
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#nav{
+    width: 400px;
+    height: 40px;
+    background: #ccc;
+    margin: 0 auto;
+}
+ul
+{
+    background: #aaa
+}
+ul li{
+    float:left;
+    display:block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    position: relative;
+ }
+ul li:hover{
+    background: #cea;
+}
+ul li ul li{
+    float: none;
+}
+ul li ul{position: absolute;top:40px;left: 0; display:none;}
+ul li ul li:hover{background: red;}
+</style>
+<div id="nav">
+<ul>
+<li><a href="#">学数学</a></li>
+<li onmouseover="show(this)" onmouseout="hide(this)"><a href="#">阿拉伯数字</a>
+<ul>
+<li><a href="#">1</a> </li>
+<li><a href="#">2</a> </li>
+<li><a href="#">3</a> </li>
+<li><a href="#">4</a> </li>
+</ul>
+</li>
+<li onmouseover="show(this)" onmouseout="hide(this)"><a href="#">汉字</a>
+<ul>
+<li><a href="#">一</a> </li>
+<li><a href="#">二</a> </li>
+<li><a href="#">三</a> </li>
+<li><a href="#">四</a> </li>
+</ul>
+</li>
+<li><a href="#">数学</a></li>
+</ul>
+</div> 
+<script>
+function show(li){
+var ul=li.getElementsByTagName("ul")[0];
+ul.style.display="block";
+}
+function hide(li){
+var ul=li.getElementsByTagName("ul")[0];
+ul.style.display="none";
+}
+</script>

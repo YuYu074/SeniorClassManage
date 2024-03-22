@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        .box {
+            position: relative;
+            width: 100px;
+            height: 30px;
+        }
+
+        .firstbox {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background-color: brown;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        .twobox {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100px;
+        }
+
+
+        .twobox>li {
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #333;
+            text-align: center;
+            color: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: -1px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="firstbox">水果</div>
+        <ul class="twobox">
+            <li>苹果</li>
+            <li>香蕉</li>
+            <li>蓝莓</li>
+            <li>荔枝</li>
+            <li>樱桃</li>
+        </ul>
+       
+    </div>
+    <script>
+        var box = document.getElementsByClassName('box')[0];
+        var twobox = document.getElementsByClassName('twobox')[0];
+        box.onmouseover = function () {
+            twobox.style.display = 'block';
+        }
+        box.onmouseout = function () {
+            twobox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平二级菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            width: 200px;
+            text-decoration: none;
+            display: block;
+            text-align:center ;
+            line-height: 50px;
+        }
+        div{
+            height: 50px;
+            width: 100%;
+            background-color: chartreuse;
+        }
+        nav{
+            height: 50px;
+            width: 1920px;
+            margin: 0 auto;
+            
+        }
+        nav ul li{
+             float: left;
+             list-style-type: none;   
+         }
+         nav ul li ul li{
+             background-color: cornflowerblue;
+             float: none;
+         }
+         nav ul li ul{
+             display: none;
+         }
+        ul li:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <nav>
+            <ul id="uli">
+                <li>
+                    <a href="#">一级菜单</a>
+                    <ul id="nav">
+                         <li><a href="#">二级菜单</a></li>
+                         <li><a href="#">二级菜单</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <ul id="uli">
+                <li>
+                    <a href="#">一级菜单</a>
+                    <ul id="nav">
+                         <li><a href="#">二级菜单</a></li>
+                         <li><a href="#">二级菜单</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <ul id="uli">
+                <li>
+                    <a href="#">一级菜单</a>
+                    <ul id="nav">
+                         <li><a href="#">二级菜单</a></li>
+                         <li><a href="#">二级菜单</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <ul id="uli">
+                <li>
+                    <a href="#">一级菜单</a>
+                    <ul id="nav">
+                         <li><a href="#">二级菜单</a></li>
+                         <li><a href="#">二级菜单</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <ul id="uli">
+                <li>
+                    <a href="#">一级菜单</a>
+                    <ul id="nav">
+                         <li><a href="#">二级菜单</a></li>
+                         <li><a href="#">二级菜单</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <ul id="uli">
+                <li>
+                    <a href="#">一级菜单</a>
+                    <ul id="nav">
+                         <li><a href="#">二级菜单</a></li>
+                         <li><a href="#">二级菜单</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        var a = function(id) {
+            return document.getElementById(id);
+        }
+        var wrapuli = a('uli').children;
+        var flag;
+        console.log(wrapuli);
+        for(var j = 0; j < wrapuli.length; j++) {
+            (function(k) {
+                wrapuli[j].onmouseover = function() {
+                    wrapuli[k].className = 'active';
+                    a('nav').style.display = 'block';
+                    flag = k;
+                }
+                wrapuli[j].onmouseout = function() {
+                    wrapuli[k].className = '';
+                    a('nav').style.display = 'none';
+                } 
+            })(j);
+        }
+        a('nav').onmouseover = function() {
+            a('nav').style.display = 'block';
+            wrapuli[flag].className = 'active';
+        }
+
+        a('nav').onmouseout = function() {
+            a('nav').style.display = 'none';
+            wrapuli[flag].className = '';
+        }
+    </script>
+    <p>made by 曾妍</p>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单练习</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    
+.box{
+    margin-top: 20px;
+    background-color: cadetblue;
+    width: 90%;
+    padding: 10px;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    transition: .3s;
+
+}.main{
+    width: 100%;
+ 
+}
+
+.box:hover{
+    margin-top: 15px;
+    box-shadow: 5px 5px 50px lightblue;
+}
+.frame{
+    border: 2px solid white;
+    padding:10px;
+}
+.div{
+    display: block;
+}
+
+.item{
+    color:black;
+    padding: 12px 0;
+
+}
+
+
+.main>h2{
+    text-align: center;
+}
+.select{
+    margin: 0 18px;
+    color: black;
+    
+}
+
+
+
+.radio{
+    color:black;
+    text-align:center;
+   
+}
+.white{
+    width:100%;
+    height:2px;
+    background-color: #fff;
+    
+}
+
+.div{
+    display: block;
+}
+.checkbox{
+    color:black
+}
+.textarea{
+    width: 85%;
+    margin-left: 30px;
+}
+.button{
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.info{
+    text-align: center;
+}
+.info>svg{
+    transform: translateY(3px) rotate(10deg);
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+</style>
+<body >
+    <div class="box">
+        <div class="frame">
+            <form action></form>
+        <div class="main">
+            <h2>大学生暑假社会实践调查问卷</h2>
+            <div class="white"></div>
+            <div class="text">
+                <p>亲爱的同学们，大家好：</p>
+                <p>为了更好的了解近年大家对计算机专业的看法，
+                    希望得到你的配合。祝你生活愉快，谢谢
+
+                </p>
+
+            </div>
+            <div class="item">
+                <div class="white"></div>
+                <span>1.您的性别:  </span>
+                男<input name="您的性别" type="radio">
+                女<input name="您的性别" type="radio">
+         </div>
+            <div class="item">
+           
+                <div class="white"></div>
+                <div class="item">
+            <span>2.您的学校: </span>
+          
+                <input name="您的学校" >
+            <div ></div>
+            <div class="white"></div>
+            <div class="item">
+                <span>3.您的年级： </span>
+                <select name="grade" id>
+                <option value="00" disabled selected>请选择你的年级</option>
+                <option value="01">大一</option>
+                <option value="02">大二</option>
+                <option value="03">大三</option>
+                    <option value="04">大四</option>
+                </option>
+            </select>
+            <div class="item">
+                <div class="white"></div>
+                <span>4.报考该专业的原因： </span>
+                <div class="checkbox">
+                    <input type="checkbox" name="radio" id="r0">
+                    <label for="r0">自己感兴趣</label>
+                    </div>
+                    <input type="checkbox" name="radio" id="r1">
+                    <label for="r1">将来发展有利</label></div>
+                    <input type="checkbox" name="radio" id="r2">
+                    <label for="r2">就业方便</label></div>
+                    <input type="checkbox" name="radio" id="r3">
+                    <label for="r3">适应社会</label></div>
+                    <input type="checkbox" name="radio" id="r4">
+                    <label for="r4">老师建议</label></div>
+                    <input type="checkbox" name="radio" id="r5">
+                    <label for="r5">学校建议</label>
+                    
+                    <div class="white"></div>
+                    <div class="main"></div>
+                    <div class="item">
+                        <p>5.您对该专业的建议： </p>
+                        <div class="checkbox">
+                            <div>
+                                <input type="checkbox" name="advice">
+                                <label for="r0">师资力量需要改造</label>
+                            </div>
+                          
+                                <input type="checkbox" name="advice">
+                                <label for="r1">更加适应社会需要</label>
+                            </div>
+                            <input type="checkbox" name="advice">
+                            <label for="r2">加强专业建设</label></div>
+                            <input type="checkbox" name="advice" id="r3">
+                            <label for="r3">开展更多专业活动</label>
+
+                            <div class="item">
+                                <div class="white"></div>
+                                <p> 6.您认为该专业的学生有必要参加社会实践吗： </p>
+                                <input type="radio" name="您认为该专业的学生有必要参加社会实践吗">有必要
+                               <input type="radio" name="您认为该专业的学生有必要参加社会实践吗">没有必要
+                               <input  name="您认为该专业的学生有必要参加社会实践吗"  type="radio">无所谓
+
+                               <div class="item">
+                                   <div class="white"></div>
+                                   <p>7.您的父母是否赞成你读此专业： </p>
+                                   <input type="radio" name="您的父母是否赞成你读此专业">很赞成</div>
+                                   <input type="radio" name="您的父母是否赞成你读此专业">一般</div>
+                                   <input type="radio" name="您的父母是否赞成你读此专业">不知道</div>
+
+                                   <div class="item">
+                                       <div class="white"></div>
+                                       <p>8.您对学校的建议</p>
+                                       <textarea placeholder="请输入你对学校的建议" name="advice" 
+                                       id cols="30" rows="10" ></textarea>
+                                       </div>
+                                       <div class="white"></div>
+                                       <div class="button">
+                                       
+                                       <button type="submit">提交答案</button>
+                                       <button type="reset">清空</button>
+                                   </div>
+                                   <div class="white"></div>
+
+
+
+                               </div>
+
+
+                            </div>
+                           
+
+
+
+                </div>
+
+            </div>
+         
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

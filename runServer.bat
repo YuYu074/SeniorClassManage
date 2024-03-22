@@ -1,0 +1,1 @@
+start cmd /c "E: && cd E:/lenove/Management/ManageServer && start ../Manage/build/index.html && node app.js"

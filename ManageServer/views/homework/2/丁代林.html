@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			ul{
+				list-style: none;
+			}
+			.box{
+				width: 300px;
+				margin: 0 auto;
+				color: #fff;
+				
+			}
+			.box li{
+				cursor: pointer;
+			}
+			.box>li{
+				background-color: green;
+				font:bold 18px/38px "宋体";
+				overflow: hidden;
+				height: 38px;
+				
+			}
+			.box>li+li{
+				border-top: 1px solid #CCCCCC;
+			}
+			.box>li li{
+				background-color: #0000FF;
+				font:bold 16px/28px "宋体";
+				padding-left: 20px;
+			}
+			.box>li li+li{
+				border-top: 1px solid #CCCCCC;
+			}
+			.box>li li:hover{
+				background-color: greenyellow;
+			}
+			
+		</style>
+	
+	</head>
+	<body>
+		<ul class="box">
+			<li class="menu">
+				<p>菜单1</p>
+				<ul class="small-box">
+					<li>子菜单1</li>
+					<li>子菜单2</li>
+					<li>子菜单3</li>
+					<li>子菜单4</li>
+				</ul>
+			</li>
+			<li class="menu">
+				<p>菜单1</p>
+				<ul class="small-box">
+					<li>子菜单1</li>
+					<li>子菜单2</li>
+					<li>子菜单3</li>
+					<li>子菜单4</li>
+				</ul>
+			</li>
+			<li class="menu">
+				<p>菜单1</p>
+				<ul class="small-box">
+					<li>子菜单1</li>
+					<li>子菜单2</li>
+					<li>子菜单3</li>
+					<li>子菜单4</li>
+				</ul>
+			</li>
+			<li class="menu">
+				<p>菜单1</p>
+				<ul class="small-box">
+					<li>子菜单1</li>
+					<li>子菜单2</li>
+					<li>子菜单3</li>
+					<li>子菜单4</li>
+				</ul>
+			</li>
+		
+		</ul>
+		
+	</body>
+	<script src="animate.js"></script>
+	<script>
+		var lis = document.querySelectorAll(".menu");
+		for(var i = 0;i<lis.length;i++){
+			lis[i].firstElementChild.isOpen = true;  
+			lis[i].firstElementChild.onclick = function(){
+				var li = this.parentNode; 
+				var ul = li.querySelector(".small-box"); 
+				var ph = this.offsetHeight;  
+				var ulh = ul.offsetHeight;  
+				var zh = ulh + ph;  
+				if(this.isOpen){
+					this.isOpen = false;
+					animate(li,{height:zh})
+				}else{
+					this.isOpen = true;
+					animate(li,{height:ph})
+				}
+				
+			}
+		}
+		
+	</script>
+</html>

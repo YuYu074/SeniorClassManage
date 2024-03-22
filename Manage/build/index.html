@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Manage</title>
+  </head>
+
+  <body>
+    <div id="top"></div>
+    <div id="box">
+      <div class="container">
+        <div class="jumbotron desc">
+          <h1 class="display-4">
+            {{direction}}
+            <img class="rotate img-fluid" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM3Mzc2ODg5NjM2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI0ODEiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTg4Mi4yMzI4ODg4OSA3NDkuNDU0MjIyMjJMNTI2LjkwNDg4ODg5IDk1MC4zODU3Nzc3OFY3OTMuOTQxMzMzMzNsMjIxLjQxMTU1NTU2LTEyMS44NTYgMTMzLjkxNjQ0NDQ0IDc3LjM2ODg4ODg5eiBtMjQuMzQ4NDQ0NDQtMjIuMDcyODg4ODlWMzA3LjA4NjIyMjIybC0xMjkuOTM0MjIyMjIgNzUuMDkzMzMzMzN2MjcwLjIyMjIyMjIzbDEyOS45MzQyMjIyMiA3NC45Nzk1NTU1NXogbS03NjYuMTc5NTU1NTUgMjIuMDcyODg4ODlsMzU1LjMyOCAyMDEuMDQ1MzMzMzNWNzkzLjk0MTMzMzMzTDI3NC4yMDQ0NDQ0NSA2NzIuMDg1MzMzMzNsLTEzMy44MDI2NjY2NyA3Ny4zNjg4ODg4OXpNMTE2LjA1MzMzMzMzIDcyNy4zODEzMzMzM1YzMDcuMDg2MjIyMjJsMTI5LjkzNDIyMjIyIDc1LjA5MzMzMzMzdjI3MC4yMjIyMjIyM0wxMTYuMDUzMzMzMzMgNzI3LjM4MTMzMzMzeiBtMTUuMjQ2MjIyMjItNDQ3LjYwMTc3Nzc4bDM2NC40MzAyMjIyMy0yMDYuMTY1MzMzMzN2MTUxLjMyNDQ0NDQ1TDI2Mi4xNDQgMzUzLjM5Mzc3Nzc4bC0xLjgyMDQ0NDQ1IDEuMDI0YzAgMC4xMTM3Nzc3OC0xMjkuMDI0LTc0LjYzODIyMjIyLTEyOS4wMjQtNzQuNjM4MjIyMjN6IG03NjAuMDM1NTU1NTYgMEw1MjYuOTA0ODg4ODkgNzMuNzI4djE1MS4zMjQ0NDQ0NWwyMzMuNDcyIDEyOC4zNDEzMzMzMyAxLjgyMDQ0NDQ0IDEuMDI0IDEyOS4xMzc3Nzc3OC03NC42MzgyMjIyM3oiIGZpbGw9IiM4RUQ2RkIiIHAtaWQ9IjI0ODIiPjwvcGF0aD48cGF0aCBkPSJNNDk1LjcyOTc3Nzc4IDc1OC4yMTUxMTExMWwtMjE4LjQ1MzMzMzMzLTEyMC4xNDkzMzMzM1Y0MDAuMTU2NDQ0NDVsMjE4LjQ1MzMzMzMzIDEyNi4xNzk1NTU1NXYyMzEuODc5MTExMTF6IG0zMS4xNzUxMTExMSAwbDIxOC40NTMzMzMzMy0xMjAuMDM1NTU1NTZWNDAwLjE1NjQ0NDQ1bC0yMTguNDUzMzMzMzMgMTI2LjE3OTU1NTU1djIzMS44NzkxMTExMXpNMjkxLjk1Mzc3Nzc4IDM3Mi42MjIyMjIyMmwyMTkuMjQ5Nzc3NzctMTIwLjQ5MDY2NjY3TDczMC40NTMzMzMzMyAzNzIuNjIyMjIyMjIgNTExLjMxNzMzMzMzIDQ5OS4yNTY4ODg4OSAyOTEuOTUzNzc3NzggMzcyLjYyMjIyMjIyeiIgZmlsbD0iIzFDNzhDMCIgcC1pZD0iMjQ4MyI+PC9wYXRoPjwvc3ZnPg==" alt="" />
+          </h1>
+          <p class="lead">{{description}}</p>
+          <div class="webIcon">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM3Mzc2OTU2ODAxIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjcwNTMiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNMTY4IDk2aC02NGE4IDggMCAwIDEgMC0xNmg2NGE4IDggMCAwIDEgMCAxNnoiIGZpbGw9IiMyNjMyMzgiIHAtaWQ9IjcwNTQiPjwvcGF0aD48cGF0aCBkPSJNMTM2IDEyOGE4IDggMCAwIDEtOC04di02NGE4IDggMCAwIDEgMTYgMHY2NGE4IDggMCAwIDEtOCA4ek03MiAxNjhoLTY0YTggOCAwIDAgMSAwLTE2aDY0YTggOCAwIDAgMSAwIDE2eiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA1NSI+PC9wYXRoPjxwYXRoIGQ9Ik00MCAyMDBBOCA4IDAgMCAxIDMyIDE5MlYxMjhhOCA4IDAgMCAxIDE2IDB2NjRhOCA4IDAgMCAxLTggOHpNOTIwIDI5NmgtODE2QTggOCAwIDAgMSA5NiAyODh2LTg4YzAtMjYuNDY0IDIxLjUzNi00OCA0OC00OGg3MzZjMjYuNDY0IDAgNDggMjEuNTM2IDQ4IDQ4VjI4OGE4IDggMCAwIDEtOCA4ek0xMTIgMjgwaDgwMHYtODBjMC0xNy42NDgtMTQuMzUyLTMyLTMyLTMySDE0NGMtMTcuNjQ4IDAtMzIgMTQuMzUyLTMyIDMydjgweiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA1NiI+PC9wYXRoPjxwYXRoIGQ9Ik0xNjAgMjU2Yy0xNy42NDggMC0zMi0xNC4zNTItMzItMzJzMTQuMzUyLTMyIDMyLTMyIDMyIDE0LjM1MiAzMiAzMi0xNC4zNTIgMzItMzIgMzJ6IG0wLTQ4YTE2LjAxNiAxNi4wMTYgMCAwIDAgMCAzMiAxNi4wMTYgMTYuMDE2IDAgMCAwIDAtMzJ6TTI0MCAyNTZjLTE3LjY0OCAwLTMyLTE0LjM1Mi0zMi0zMnMxNC4zNTItMzIgMzItMzIgMzIgMTQuMzUyIDMyIDMyLTE0LjM1MiAzMi0zMiAzMnogbTAtNDhhMTYuMDE2IDE2LjAxNiAwIDAgMCAwIDMyIDE2LjAxNiAxNi4wMTYgMCAwIDAgMC0zMnpNMjAwIDkzNmgtMzJhOCA4IDAgMCAxIDAtMTZoMzJhOCA4IDAgMCAxIDAgMTZ6TTU1MiA5MzZoLTMyMGE4IDggMCAwIDEgMC0xNmgzMjBhOCA4IDAgMCAxIDAgMTZ6TTg1NiAxMDRoLTMyYTggOCAwIDAgMSAwLTE2aDMyYTggOCAwIDAgMSAwIDE2ek03OTIgMTA0aC0zMjBhOCA4IDAgMCAxIDAtMTZoMzIwYTggOCAwIDAgMSAwIDE2eiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA1NyI+PC9wYXRoPjxwYXRoIGQ9Ik04MzQuOTc2IDc4Ni45NzZ2MTM1Ljc3NmwzOS42LTM5LjYgODQuODQ4IDg0Ljg0OCA1Ni41NzYtNTYuNTc2LTg0Ljg0OC04NC44NDggMzkuNi0zOS42eiIgZmlsbD0iIzQwQzRGRiIgcC1pZD0iNzA1OCI+PC9wYXRoPjxwYXRoIGQ9Ik05NTkuNDQgOTc2YTguMDY0IDguMDY0IDAgMCAxLTUuNjY0LTIuMzM2bC03OS4yLTc5LjItMzMuOTM2IDMzLjkzNmE4IDggMCAxIDEtMTMuNjY0LTUuNjY0di0xMzUuNzZhOCA4IDAgMCAxIDgtOGgxMzUuNzZhOCA4IDAgMCAxIDUuNjY0IDEzLjY2NGwtMzMuOTUyIDMzLjk1MiA3OS4yIDc5LjJhOCA4IDAgMCAxIDAgMTEuMzEybC01Ni41NiA1Ni41NzZhOC4wNDggOC4wNDggMCAwIDEtNS42NDggMi4zMnogbS04NC44NjQtMTAwLjg0OGMyLjA0OCAwIDQuMDk2IDAuNzg0IDUuNjY0IDIuMzM2bDc5LjIgNzkuMiA0NS4yNDgtNDUuMjY0LTc5LjItNzkuMmE4IDggMCAwIDEgMC0xMS4zMjhsMjUuOTUyLTI1Ljk1MmgtMTA4LjQ0OHYxMDguNDQ4bDI1LjkzNi0yNS45MzZhOC4wOCA4LjA4IDAgMCAxIDUuNjQ4LTIuMzA0eiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA1OSI+PC9wYXRoPjxwYXRoIGQ9Ik04MDIuOTkyIDg3MkgxNDRjLTI2LjQ2NCAwLTQ4LTIxLjUzNi00OC00OFYyODhhOCA4IDAgMCAxIDgtOGg4MTZhOCA4IDAgMCAxIDggOHY0NjYuOTkyYTggOCAwIDAgMS0xNiAwVjI5NkgxMTJ2NTI4YzAgMTcuNjQ4IDE0LjM1MiAzMiAzMiAzMmg2NTguOTkyYTggOCAwIDAgMSAwIDE2eiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA2MCI+PC9wYXRoPjxwYXRoIGQ9Ik0yNzIgMzM2aDQ4MHYxNjBIMjcyeiIgZmlsbD0iI0ZGRDc0MCIgcC1pZD0iNzA2MSI+PC9wYXRoPjxwYXRoIGQ9Ik03NTIgNTA0SDI3MmE4IDggMCAwIDEtOC04VjMzNmE4IDggMCAwIDEgOC04aDQ4MGE4IDggMCAwIDEgOCA4djE2MGE4IDggMCAwIDEtOCA4eiBtLTQ3Mi0xNmg0NjR2LTE0NGgtNDY0djE0NHoiIGZpbGw9IiMyNjMyMzgiIHAtaWQ9IjcwNjIiPjwvcGF0aD48cGF0aCBkPSJNNzUyIDUwNGE3Ljc0NCA3Ljc0NCAwIDAgMS0yLjUyOC0wLjQxNmwtNDgwLTE2MGE4IDggMCAxIDEgNS4wNzItMTUuMTY4bDQ4MCAxNjBBOCA4IDAgMCAxIDc1MiA1MDR6IiBmaWxsPSIjMjYzMjM4IiBwLWlkPSI3MDYzIj48L3BhdGg+PHBhdGggZD0iTTI3MiA1MDRhOCA4IDAgMCAxLTIuNTQ0LTE1LjU4NGw0ODAtMTYwYTggOCAwIDAgMSA1LjA3MiAxNS4xNjhsLTQ4MCAxNjBBNy43NDQgNy43NDQgMCAwIDEgMjcyIDUwNHpNMjI0IDQ2NGE4LjAzMiA4LjAzMiAwIDAgMS01LjY2NC0yLjMzNmwtNDAtNDBhOCA4IDAgMCAxIDAtMTEuMzEybDQwLTQwYTggOCAwIDAgMSAxMS4zMTIgMTEuMzEyTDE5NS4zMTIgNDE2bDM0LjMzNiAzNC4zMzZBOCA4IDAgMCAxIDIyNCA0NjR6TTgwMCA0NjRhOCA4IDAgMCAxLTUuNjY0LTEzLjY0OEw4MjguNjg4IDQxNmwtMzQuMzM2LTM0LjMzNmE4IDggMCAwIDEgMTEuMzEyLTExLjMxMmw0MCA0MGE4IDggMCAwIDEgMCAxMS4zMTJsLTQwIDQwQTguMDMyIDguMDMyIDAgMCAxIDgwMCA0NjR6IiBmaWxsPSIjMjYzMjM4IiBwLWlkPSI3MDY0Ij48L3BhdGg+PHBhdGggZD0iTTI3MiA1NjBoMTI4djEyOGgtMTI4eiIgZmlsbD0iI0ZGNTI1MiIgcC1pZD0iNzA2NSI+PC9wYXRoPjxwYXRoIGQ9Ik00MDAgNjk2aC0xMjhhOCA4IDAgMCAxLTgtOHYtMTI4YTggOCAwIDAgMSA4LThoMTI4YTggOCAwIDAgMSA4IDh2MTI4YTggOCAwIDAgMS04IDh6IG0tMTIwLTE2aDExMnYtMTEyaC0xMTJ2MTEyeiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA2NiI+PC9wYXRoPjxwYXRoIGQ9Ik00MDAgNjk2YTguMDMyIDguMDMyIDAgMCAxLTUuNjY0LTIuMzM2bC0xMjgtMTI4YTggOCAwIDAgMSAxMS4zMTItMTEuMzEybDEyOCAxMjhBOCA4IDAgMCAxIDQwMCA2OTZ6IiBmaWxsPSIjMjYzMjM4IiBwLWlkPSI3MDY3Ij48L3BhdGg+PHBhdGggZD0iTTI3MiA2OTZhOCA4IDAgMCAxLTUuNjY0LTEzLjY0OGwxMjgtMTI4YTggOCAwIDAgMSAxMS4zMTIgMTEuMzEybC0xMjggMTI4QTcuOTY4IDcuOTY4IDAgMCAxIDI3MiA2OTZ6TTU2MS4zMjggNTY4aC0xMjBhOCA4IDAgMCAxIDAtMTZoMTIwYTggOCAwIDAgMSAwIDE2ek01NjEuMzI4IDYzMmgtMTIwYTggOCAwIDAgMSAwLTE2aDEyMGE4IDggMCAwIDEgMCAxNnpNNTYxLjMyOCA2OTZoLTEyMGE4IDggMCAwIDEgMC0xNmgxMjBhOCA4IDAgMCAxIDAgMTZ6TTc1MiA4MjRoLTEyOGE4IDggMCAwIDEtOC04VjU2MGE4IDggMCAwIDEgOC04aDEyOGE4IDggMCAwIDEgOCA4djI1NmE4IDggMCAwIDEtOCA4eiBtLTEyMC0xNmgxMTJ2LTI0MGgtMTEydjI0MHoiIGZpbGw9IiMyNjMyMzgiIHAtaWQ9IjcwNjgiPjwvcGF0aD48cGF0aCBkPSJNNzUyIDgyNGE4IDggMCAwIDEtNy4xNTItNC40MTZsLTEyOC0yNTZhOCA4IDAgMCAxIDE0LjMyLTcuMTUybDEyOCAyNTZBOCA4IDAgMCAxIDc1MiA4MjR6IiBmaWxsPSIjMjYzMjM4IiBwLWlkPSI3MDY5Ij48L3BhdGg+PHBhdGggZD0iTTYyNCA4MjRhOCA4IDAgMCAxLTcuMTY4LTExLjU4NGwxMjgtMjU2YTggOCAwIDAgMSAxNC4zMiA3LjE1MmwtMTI4IDI1NkE3Ljk4NCA3Ljk4NCAwIDAgMSA2MjQgODI0eiIgZmlsbD0iIzI2MzIzOCIgcC1pZD0iNzA3MCI+PC9wYXRoPjxwYXRoIGQ9Ik01NjAgODQwYTggOCAwIDAgMS04LTh2LTcyaC0yNzJWODMyYTggOCAwIDAgMS0xNiAwdi04MGE4IDggMCAwIDEgOC04aDI4OGE4IDggMCAwIDEgOCA4djgwYTggOCAwIDAgMS04IDh6IiBmaWxsPSIjMjYzMjM4IiBwLWlkPSI3MDcxIj48L3BhdGg+PC9zdmc+" alt="" />
+          </div>
+          <hr />
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-toggle="collapse"
+                data-target="#studentInfoList"
+                aria-expanded="false"
+                aria-controls="studentInfoList"
+              >
+                展开/折叠
+              </button>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="输入学号或姓名以查找，支持模糊查询"
+              v-model="input"
+              @keyup.enter="search"
+              aria-label="Text input with segmented dropdown button"
+            />
+            <div class="input-group-append">
+              <button type="button" class="btn btn-info" @click="search">
+                查找
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary dropdown-toggle"
+                id="screenMenu"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                筛选
+              </button>
+              <div class="dropdown-menu" aria-labelledby="screenMenu">
+                <a class="dropdown-item" href="#" @click="all">全部</a>
+                <div class="dropdown-divider"></div>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  v-for="(e, i) in majorList"
+                  :key="i"
+                  @click="searchByMajor(i)"
+                  >{{e}}</a
+                >
+                <div class="dropdown-divider"></div>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  v-for="(e, i) in conditionList"
+                  :key="i + 'uniqueKey'"
+                  @click="searchByCondition(i)"
+                  >{{e}}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse show" id="studentInfoList">
+          <div class="card card-body">
+            <div class="table-responsive">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col" v-for="(th, i) in thList" :key="i">
+                      {{th}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody v-show="!editMode">
+                  <tr
+                    v-for="student in (searching ? searchList : studentList)"
+                    :key="student.regNum"
+                  >
+                    <th scope="row" class="regNumInfo">
+                      <img
+                        class="member"
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM3NjgzMTU0NzcyIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI2OTEiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTQ2OC40OTYgNjRjMTYuOTYgMCAzNy4yOCAzLjM2IDU0LjIyNCA2LjczNiAxNi45NDQgMy4zNiAzMy44NzIgMTAuMTEyIDQ3LjQ0IDE2Ljg0OCAxMy41NTIgNi43MiAyNy4xMDQgMTMuNDcyIDM3LjI4IDIzLjU2OCAxMC4xNDQgMTAuMTEyIDIwLjMyIDE2Ljg0OCAyNy4wODggMjMuNTg0IDE2Ljk2IDIwLjIwOCAyNy4xMDQgNDAuNDE2IDM3LjI4IDY0IDYuNzY4IDIzLjU4NCAxMy41NTIgNDMuNzkyIDE2Ljk0NCA2NCAzLjM3NiAyMy41ODQgMy4zNzYgNDcuMTUyIDMuMzc2IDcwLjczNmwxMC4xNzYgMTAuMTEyYzMuMzc2IDMuMzYgMy4zNzYgMTAuMDk2IDYuNzY4IDE2LjgzMiAwIDYuNzM2IDMuMzkyIDEzLjQ3MiAwIDIzLjU4NCAwIDEzLjQ3Mi0zLjM5MiAyMy41ODQtMTAuMTYgMzAuMzItMy4zOTIgNi43Mi0xMC4xNiAxMy40NzItMTMuNTUyIDE2LjgzMi02Ljc4NCAzLjM2LTEwLjE2IDYuNzM2LTE2Ljk0NCAxMC4xMTItMy4zOTIgMTAuMTEyLTYuNzg0IDIwLjIwOC0xMC4xNiAyNi45NDQtMy4zOTIgNi43MzYtNi43ODQgMTYuODQ4LTEwLjE3NiAyMy41ODQtMy4zNzYgNi43Mi0xMC4xNiAxMy40NzItMTMuNTUyIDE2LjgzMi0zLjM5MiAzLjM3Ni0xMC4xNiA2Ljc1Mi0xNi45NDQgMTMuNDg4LTMuMzc2IDMuMzYtMTAuMTYgNi43Mi0xMy41NTIgMTAuMDk2LTMuMzc2IDMuMzYtNi43NjggNi43MzYtMTAuMTYgMTMuNDcyLTMuMzkyIDMuMzYtMy4zOTIgMTAuMTEyLTYuNzg0IDE2Ljg0OCAwIDEwLjA5Ni0zLjM3NiAxNi44NDggMCAyNi45NDQgMCAxMC4xMTIgMy4zOTIgMTYuODQ4IDYuNzg0IDI2Ljk0NCAzLjM5MiAxMC4xMTIgMTMuNTUyIDE2Ljg0OCAyMC4zMiAyNi45NiA5LjA1NiA0LjQ4IDE4LjA5NiA4Ljk5MiAyOC4xNiAxMy40ODhBMjIzLjM0NCAyMjMuMzQ0IDAgMCAwIDU3NiA4MTZjMCA0OS4wMjQgMTUuNzYgOTQuMzg0IDQyLjQ2NCAxMzEuMjY0bC0yMS4yIDIuNjI0Yy0yNy4xMDQgMy4zNi01MC44MzIgNi43MzYtNzcuOTM2IDYuNzM2LTIzLjcxMiAwLTQ3LjQ0IDMuMzc2LTY0LjM4NCAzLjM3Ni0xNi45NDQgMC00MC42NTYgMC02NC4zNjgtMy4zNi0yMy43MjgtMy4zNzYtNDcuNDQtMy4zNzYtNzQuNTYtNi43NTItMjMuNzEyLTMuMzYtNTAuODE2LTYuNzItNzQuNTQ0LTEwLjA5Ni0yMy43MTItMy4zNi00Ny40MjQtNi43MzYtNjcuNzYtMTAuMTEyLTIwLjMyLTMuMzYtMzcuMjgtNi43Mi01MC44MzItMTAuMDk2LTEzLjU1Mi0zLjM2LTIzLjcxMi02LjczNi0yNy4xMDQtMTAuMTEyLTYuNzY4LTMuMzYtMTAuMTYtMjAuMjA4LTEzLjU1Mi00My43OTItMy4zOTItMjMuNTY4LTMuMzkyLTU3LjI2NCAzLjM5Mi05NC4zMDQgMy4zOTItMjAuMjI0IDEzLjU1Mi0zNy4wNTYgMzAuNDk2LTUwLjUyOCAxNi45NDQtMTAuMTEyIDMzLjg4OC0yMC4yMjQgNTQuMjA4LTI2Ljk2IDIwLjMyLTYuNzIgNDAuNjcyLTEzLjQ3MiA2NC4zODQtMTYuODMyIDIwLjMyLTYuNzM2IDQwLjY1Ni0xMy40NzIgNTcuNi0yMy41ODQgMTYuOTQ0LTYuNzIgMjcuMTA0LTEzLjQ3MiAzMy44ODgtMjAuMjA4IDYuNzY4LTYuNzM2IDEzLjU1Mi0xMy40NzIgMTYuOTQ0LTIwLjIwOCAzLjAwOC01Ljk4NCAzLjM0NC0xMS45ODQgMy4zNzYtMjAuMzJ2LTMwLjIwOGMwLTEzLjQ3Mi02Ljc2OC0yMy41ODQtMTYuOTI4LTMzLjY4LTEwLjE3Ni02LjczNi0yMC4zMzYtMTYuODQ4LTMwLjQ5Ni0yMy41ODQtNi43ODQtMy4zNi0xMC4xNzYtMTAuMTEyLTEzLjU1Mi0xNi44NDhhMTYzLjcxMiAxNjMuNzEyIDAgMCAxLTEwLjE3Ni0yMy41NjhjLTMuMzkyLTEwLjExMi02Ljc2OC0xNi44NDgtMTAuMTYtMjYuOTYtMy4zOTIgMC0xMC4xNi0zLjM2LTEzLjU1Mi02LjcybC0xMy41NTItMTMuNDg4Yy0zLjM5Mi02LjcyLTYuNzg0LTEzLjQ3Mi0xMC4xNzYtMjMuNTY4LTMuMzc2LTEwLjExMi0zLjM3Ni0yMC4yMjQtMy4zNzYtMjYuOTYgMC02LjcyIDMuMzc2LTEzLjQ3MiA2Ljc2OC0yMC4yMDhsMTAuMTYtMjAuMjA4YzAtMjMuNTg0IDAtNDMuNzkyIDMuMzkyLTY3LjM2IDYuNzg0LTE2Ljg0OCAxMC4xNzYtMzcuMDU2IDE2Ljk2LTU3LjI4IDYuNzY4LTIwLjIwOCAxNi45MjgtNDAuNDE2IDMwLjQ4LTU3LjI0OCAxMy41NTItMTYuODQ4IDIzLjcyOC0zMC4zMiA0MC42NTYtNDAuNDMyIDEzLjU1Mi0xMC4wOTYgMzAuNDk2LTIwLjIwOCA0NC4wNDgtMjMuNTY4IDEzLjU2OC02LjczNiAzMC40OTYtMTAuMTEyIDQ3LjQ0LTEzLjQ3MkM0NDEuNDA4IDY0IDQ1NC45NDQgNjQgNDY4LjQ5NiA2NHogbTE3Ljk4NCA2MjRoLTQ4LjQzMmMtNi45MTIgNi41OTItMTMuODI0IDkuODg4LTE3LjI4IDE2LjQ4LTMuNDcyIDMuMjgtNi45MjggOS44NzItMTAuNCAxMy4xNjgtMy40NTYgMy4yOTYtMy40NTYgNi41OTItMy40NTYgOS44ODggMy40NzIgNi41NzYgNi45MjggOS44NzIgMTAuNCAxNi40NjRsMTAuMzY4IDkuODg4YzAgMy4yOTYtMy40NTYgOS44NzItNi45MjggMTkuNzZhNDAwIDQwMCAwIDAgMC0xMC4zNjggMzIuOTQ0Yy0zLjQ3MiA5Ljg3Mi02LjkyOCAyMy4wNC02LjkyOCAzMi45NDRDNDAwIDg0OS40MDggNDAwIDg1NiA0MDAgODYyLjU2YzAgMy4zMTIgMy40NTYgNi42MDggNi45MTIgMTMuMTg0IDYuOTI4IDYuNTkyIDEwLjQgOS44ODggMjAuNzY4IDE2LjQ4IDYuOTEyIDYuNTc2IDEzLjg0IDkuODcyIDIwLjc1MiAxMy4xNjggNi45MTIgMy4yOTYgMTMuODQgNi41OTIgMTcuMjk2IDYuNTkyIDMuNDU2IDAgMTAuMzg0LTMuMjk2IDE3LjI5Ni02LjU5MiA2LjkyOC0zLjI5NiAxMy44NC05Ljg3MiAyMC43NTItMTMuMTY4IDYuOTI4LTYuNTkyIDEzLjg0LTkuODg4IDE3LjMxMi0xNi40OCAzLjQ1NiAwIDYuOTEyLTYuNTc2IDYuOTEyLTkuODcyIDAtMy4yOTYgMC05Ljg4OC0zLjQ1Ni0xOS43NzYtMy40NTYtOS44NzItMy40NTYtMTkuNzYtNi45MjgtMzIuOTI4LTMuNDU2LTkuODg4LTMuNDU2LTIzLjA3Mi02LjkxMi0zMi45Ni0zLjQ1Ni05Ljg3Mi0zLjQ1Ni0xNi40NjQtNi45MjgtMjMuMDRhNTEuNTIgNTEuNTIgMCAwIDAgMjAuNzY4LTI2LjM2OGMwLTMuMjggMC02LjU3Ni0zLjQ1Ni0xMy4xNjgtMy40NzItMy4yOTYtNi45MjgtOS44ODgtMTMuODQtMTMuMTg0LTYuOTI4LTMuMjgtMTMuODQtOS44NzItMjAuNzY4LTE2LjQ2NHpNODAwIDY1NmM4OC4zODQgMCAxNjAgNzEuNjE2IDE2MCAxNjBzLTcxLjYxNiAxNjAtMTYwIDE2MC0xNjAtNzEuNjE2LTE2MC0xNjAgNzEuNjE2LTE2MCAxNjAtMTYweiBtNzguNzIgMTIwLjczNmMxMy43NzYtMTguNDgtMTkuMjY0LTM1LjgwOC0zMi44NDgtMTcuNDI0bC02My4zOTIgODUuNTA0LTM5LjkzNi0yNy41NjhjLTguMjI0LTUuNzYtMjEuMjQ4LTEuMTUyLTI2LjAzMiA2LjIyNC01Ljc2IDguOC0xLjQ0IDE3LjkwNCA2Ljc4NCAyMy42NDggMTguMDE2IDEyLjQ0OCAzNiAyNC44OTYgNTQuMTEyIDM3LjM0NCA4LjYwOCA1LjkyIDIwLjc2OCAwLjg2NCAyNi4wMzItNi4yNCAyNS4wODgtMzMuNzkyIDUwLjE3Ni02Ny42OCA3NS4yNjQtMTAxLjQ4OHoiIGZpbGw9IiM1M0E0RkMiIHAtaWQ9IjI2OTIiPjwvcGF0aD48L3N2Zz4="
+                        v-if="student.isEliteMenber"
+                        alt=""
+                      />
+                      {{student.regNum}}
+                    </th>
+                    <td class="majorInfo">{{student.major}}</td>
+                    <td class="nameInfo">{{student.name}}</td>
+                    <td class="gradeInfo">
+                      <img
+                        :key="i"
+                        :src="getGradeLevel(score)"
+                        @click="view(i, student.name)"
+                        v-for="(score, i) in student.homeworkScore"
+                        alt=""
+                      />
+                    </td>
+                    <td
+                      class="absenceInfo"
+                      :class="{absent: student.absence > 0}"
+                    >
+                      {{student.absence ? student.absence : '未缺勤'}}
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-warning"
+                        @click="opt(student)"
+                      >
+                        修改
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody v-show="editMode">
+                  <tr>
+                    <td>
+                      <input
+                        :size="tempStudent.regNum && Math.floor(tempStudent.regNum.length / 2)"
+                        type="text"
+                        v-model="tempStudent.regNum"
+                        class="contentCenter form-control"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        :size="tempStudent.major && Math.floor(tempStudent.major.length / 2)"
+                        v-model="tempStudent.major"
+                        class="contentCenter form-control"
+                        type="text"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        :size="tempStudent.name && Math.floor(tempStudent.name.length / 2)"
+                        v-model="tempStudent.name"
+                        class="contentCenter form-control"
+                        type="text"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        :size="tempStudent.homeworkScore && Math.floor(tempStudent.homeworkScore.length / 3) || 1"
+                        v-model="tempStudent.homeworkScore"
+                        class="contentCenter form-control"
+                        type="text"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        size="1"
+                        v-model="tempStudent.absence"
+                        class="form-control contentCenter"
+                        type="text"
+                      />
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button
+                          type="button"
+                          class="btn btn-success"
+                          @click="submitForm(tempStudent)"
+                        >
+                          提交
+                        </button>
+                        <button
+                          type="button"
+                          @click="unOpt"
+                          class="btn btn-secondary"
+                        >
+                          取消
+                        </button>
+                        <button
+                          type="button"
+                          data-toggle="dropdown"
+                          aria-expanded="false"
+                          class="btn btn-primary dropdown-toggle"
+                        >
+                          更多
+                        </button>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            v-for="(opt, i) in moreOptList"
+                            :key="i"
+                            @click="moreOpt(i)"
+                          >
+                            {{opt}}
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="topBox" v-show="showTopBtn">
+        <a href="#top" class="top" title="返回顶部"
+          ><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjM3Mzc1ODA5MDkxIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjExODUiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTc2LjggNDgwTDQ5OS4yIDU3LjZjNi40LTYuNCAxOS4yLTYuNCAyNS42IDBMOTQ3LjIgNDgwYzYuNCA2LjQgMTIuOCA2LjQgMTkuMiA2LjQgNi40IDAgMTIuOCAwIDE5LjItNi40IDEyLjgtMTIuOCAxMi44LTI1LjYgMC0zOC40TDU1Ni44IDE5LjJjLTI1LjYtMjUuNi03Ni44LTI1LjYtMTAyLjQgMEwzMiA0NDEuNmMtNi40IDYuNC02LjQgMjUuNiAwIDM4LjRzMzIgMTIuOCA0NC44IDB6TTMyIDY3MmgxMDguOHYzNDUuNkgxOTJWNjcyaDEwOC44di0zOC40SDMyek00OTkuMiA2MjcuMmMtNTcuNiAwLTEwMi40IDE5LjItMTM0LjQgNTcuNi0zMiAzOC40LTUxLjIgODkuNi01MS4yIDE0Ny4yIDAgNTcuNiAxOS4yIDEwMi40IDUxLjIgMTQwLjggMzIgMzIgNzYuOCA1MS4yIDEyOCA1MS4yIDU3LjYgMCAxMDIuNC0xOS4yIDEzNC40LTU3LjZzNTEuMi04OS42IDUxLjItMTQ3LjJjMC01Ny42LTE5LjItMTAyLjQtNTEuMi0xNDAuOC0yNS42LTM4LjQtNzAuNC01MS4yLTEyOC01MS4yeiBtOTYgMzEzLjZjLTI1LjYgMjUuNi01Ny42IDM4LjQtOTYgMzguNHMtNzAuNC0xMi44LTk2LTQ0LjhjLTI1LjYtMjUuNi0zOC40LTY0LTM4LjQtMTE1LjIgMC00NC44IDEyLjgtODMuMiAzOC40LTExNS4yIDI1LjYtMjUuNiA1Ny42LTQ0LjggOTYtNDQuOHM3MC40IDEyLjggOTYgMzguNGMyNS42IDI1LjYgMzIgNjQgMzIgMTE1LjIgMCA2NC0xMi44IDk2LTMyIDEyOHpNOTYwIDY1OS4yYy0yNS42LTE5LjItNTcuNi0zMi05Ni0zMkg3NTUuMnYzODRoNTEuMlY4NjRoNTEuMmMzOC40IDAgNzYuOC0xMi44IDEwMi40LTMyIDI1LjYtMjUuNiAzOC40LTUxLjIgMzguNC04OS42IDAtMzItMTIuOC02NC0zOC40LTgzLjJ6IG0tMzguNCAxNDcuMmMtMTIuOCAxMi44LTM4LjQgMTkuMi03MC40IDE5LjJoLTQ0LjhWNjcyaDUxLjJjNTcuNiAwIDg5LjYgMjUuNiA4OS42IDc2LjggMCAyNS42LTEyLjggNDQuOC0yNS42IDU3LjZ6IiBwLWlkPSIxMTg2Ij48L3BhdGg+PC9zdmc+" alt="top"
+        /></a>
+      </div>
+      <div
+        class="position-fixed bottom-0 right-0 p-3"
+        style="z-index: 5; right: 0; bottom: 0"
+      >
+        <div
+          id="liveToast"
+          class="toast"
+          :class="{show: toast, hide: !toast}"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="2000"
+        >
+          <div class="toast-header">
+            <strong class="mr-auto">提示</strong>
+            <small>a few seconds ago</small>
+            <button
+              type="button"
+              class="ml-2 mb-1 close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">{{optRes}}</div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/built.js"></script></body>
+</html>

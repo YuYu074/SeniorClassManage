@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卑微王作舟的前端作业</title>
+  <style>
+    .box {
+      margin-top: 20px;
+      background-color: rgb(235, 163, 202);
+      width: 90%;
+      padding: 10px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .3s;
+    }
+
+    .box:hover {
+      margin-top: 15px;
+      box-shadow: 5px 5px 50px rgb(66, 167, 230);
+    }
+
+    .frame {
+      border: 10px solid white;
+      padding: 10px;
+    }
+
+    .main {
+      width: 100%;
+      color:rgb(101, 157, 221);
+    }
+
+    .main>.item {
+      padding: 15px 0;
+      text-indent: 2rem;
+    }
+
+    .main>h2 {
+      text-align: center;
+    }
+
+    .checkbox>div,
+    .radio>div {
+      margin: 30px;
+    }
+
+    .white {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    .text>p {
+      text-indent: 2rem;
+    }
+
+    select {
+      margin: 0 18px;
+    }
+
+    .radio {
+      color: black;
+    }
+
+    .checkbox {
+      color: black;
+    }
+
+    .checkbox>input[type="checkbox"] {
+      display: inline-block;
+      margin-left: 30px;
+    }
+
+    textarea {
+      width: 90%;
+      margin-left: 30px;
+    }
+
+    .btnBox {
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .info {
+      text-align: center;
+    }
+
+    .info>svg {
+      transform: translateY(10px) rotate(20deg);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="frame">
+      <form action="">
+        <div class="main">
+          <h2>大学生暑假社会实践调查问卷</h2>
+          <div class="white"></div>
+          <div class="text">
+            <p>亲爱的同学们，大家好：</p>
+            <p>为了更好的了解近年大家对计算机专业的看法，希望得到你的配合。祝你生活愉快，感谢你的参与。</p>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <span>1. 您的性别：</span>
+            <span style="color: rgb(6, 5, 15);">
+              <input type="radio" name="sex" id="male"><label for="male">男</label>
+              <input type="radio" name="sex" id="female"><label for="female">女</label>
+            </span>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <span>2. 您的学校：</span>
+           
+           </option> <input type="text">
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <span>3. 您的年级</span>
+            <select name="grade" id="">
+              <option value="00" disabled selected>请选择你的年级</option>
+              <option value="01">大一</option>
+              <option value="02">大二</option>
+              <option value="03">大三</option>
+              <option value="04">大四</option>
+            </select>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <p>4. 报考该专业的原因</p>
+            <div class="checkbox">
+              <div><input type="checkbox" name="reason" id="r0"><label for="r0">自己感兴趣</label></div>
+              <div><input type="checkbox" name="reason" id="r1"><label for="r1">将来发展有利</label></div>
+              <div><input type="checkbox" name="reason" id="r2"><label for="r2">就业方便</label></div>
+              <div><input type="checkbox" name="reason" id="r3"><label for="r3">适应社会</label></div>
+              <div><input type="checkbox" name="reason" id="r4"><label for="r4">老师建议</label></div>
+              <div><input type="checkbox" name="reason" id="r5"><label for="r5">学校建议</label></div>
+              <div><input type="checkbox" name="reason" id="r6"><label for="r6">其他</label></div>
+            </div>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <p>5. 您对该专业的建议</p>
+            <div class="checkbox">
+              <div><input type="checkbox" name="advice" id="a0"><label for="a0">师资力量要改进</label></div>
+              <div><input type="checkbox" name="advice" id="a1"><label for="a1">更加适应社会需要</label></div>
+              <div><input type="checkbox" name="advice" id="a2"><label for="a2">加强专业建设</label></div>
+              <div><input type="checkbox" name="advice" id="a3"><label for="a3">开展更多专业活动</label></div>
+            </div>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <span>6. 您认为该专业学生有必要参加社会实践：</span>
+            <div class="radio">
+              <div><input type="radio" name="socialPractice" id="s0"><label for="s0">有必要</label></div>
+              <div><input type="radio" name="socialPractice" id="s1"><label for="s1">没有必要</label></div>
+              <div><input type="radio" name="socialPractice" id="s2"><label for="s2">无所谓</label></div>
+            </div>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <span>7. 您的父母是否赞成你读该专业：</span>
+            <div class="radio wrap">
+              <div><input type="radio" name="endorse" id="e0"><label for="e0">很赞成</label></div>
+              <div><input type="radio" name="endorse" id="e1"><label for="e1">一般</label></div>
+              <div><input type="radio" name="endorse" id="e2"><label for="e2">不知道</label></div>
+            </div>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <p>8. 您对学校的建议：</p>
+            <textarea placeholder="请输入你对学校的意见" name="advice" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="white"></div>
+          <div class="btnBox">
+            <button type="submit">提交答案</button>
+            <button type="reset">清空</button>
+          </div>
+          <div class="white"></div>
+          <div class="item">
+            <p class="info">
+              <span>Made By <a href="https://user.qzone.qq.com/1439858966/infocenter">王作舟 点我点我</a></span>
+              
+                <path
+                  d="M334.848 343.04q22.528-28.672 49.152-50.176 22.528-18.432 50.176-33.792t57.344-13.312q43.008 3.072 71.68 20.48t45.568 43.008 23.04 58.368 4.096 66.56-13.312 64.512-27.136 57.856-34.304 49.664-36.864 40.96q-27.648 28.672-58.368 54.784t-58.368 46.08-49.664 31.744-32.256 11.776q-12.288 0-32.256-12.288t-44.544-32.256-52.224-46.08-55.296-52.736q-17.408-17.408-38.912-39.424t-40.448-48.128-32.256-57.344-14.336-67.072q-2.048-34.816 7.168-66.048t27.136-55.808 44.032-41.472 58.88-24.064 65.024 6.656 58.88 33.28q30.72 22.528 58.368 54.272zM611.328 245.76q13.312 0 25.6 1.024 11.264 1.024 23.552 3.072t21.504 6.144 19.456 10.752 19.456 12.8l20.48 16.384q6.144-6.144 13.312-11.264 13.312-10.24 35.84-23.552 12.288-7.168 28.672-10.752t33.28-2.56 33.28 6.656 27.648 17.92q31.744 33.792 37.888 66.048t-1.536 60.416-23.04 49.664-27.648 33.792q-23.552 23.552-44.544 40.96t-51.712 39.936q-16.384 11.264-34.304 19.456t-27.136 8.192q-9.216 1.024-19.968-7.68t-26.112-19.968q-7.168-5.12-13.312-12.288l-12.288-11.264-12.288-12.288q11.264-20.48 18.432-46.08 6.144-21.504 9.216-50.688t-3.072-62.976q-7.168-31.744-18.944-55.296t-23.04-37.888q-13.312-17.408-28.672-28.672z"
+                  fill="#ee0000" p-id="9795"></path>
+              </svg>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+
+</html>

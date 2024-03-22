@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .box2
+    {
+    position: absolute;
+    top:150px;
+    width: 300px;
+    height: 271px;
+    background-image: url("img/10.png");
+    background-position: 0 0;
+    animation: move 1s steps(6) infinite,move2 1s forwards;
+    opacity: .8;
+    }
+    @keyframes move{
+        0%{
+            background-position: 0 0;
+
+        }
+        100%{
+            background-position: -1800PX 0;
+        }
+    }
+    @keyframes move2{
+        0%{
+           transform: translateX(0);
+
+        }
+        100%{
+            transform: translateX(500px);
+
+        }
+    }
+</style>
+<body>
+    
+        <div class="box2">
+
+        </div>
+   
+</body>
+</html>

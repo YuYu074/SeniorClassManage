@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+
+  #top {
+    position: absolute;
+    top: 0;
+  }
+
+  #box {
+    margin: 10px;
+
+    .desc {
+      position: relative;
+
+      .rotate {
+        animation: rotate 10s infinite linear;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(180deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .webIcon {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+
+        img {
+          width: 192px;
+          height: 192px;
+        }
+      }
+    }
+
+    table {
+      text-align: center;
+
+      tbody {
+        position: relative;
+
+        input.contentCenter {
+          text-align: center;
+        }
+      }
+
+      tr {
+
+        th,
+        td {
+          vertical-align: middle;
+        }
+      }
+
+      .regNumInfo {
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          padding: 2px;
+          position: absolute;
+          left: 5%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .majorInfo {
+        color: blueviolet;
+      }
+
+      .nameInfo {
+        font-weight: bold;
+        color: blue;
+      }
+
+      .gradeInfo {
+        img {
+          width: 32px;
+          height: 32px;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .absenceInfo {
+        color: green;
+      }
+
+      .absent {
+        font-weight: bold;
+        color: red;
+      }
+    }
+
+    .topBox {
+      position: fixed;
+      bottom: 5%;
+      right: 3%;
+      padding: 5px;
+
+      .top {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.3;
+        z-index: 10;
+        border: 1px solid #555555;
+        width: 50px;
+        height: 50px;
+        background-color: #25e713;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .5s;
+      }
+
+      .top:hover {
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+  }
+}

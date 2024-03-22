@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+    <style>
+@keyframes move{
+
+        0%{
+            transform: translate(0,0);
+        }
+        25%{
+            transform: translate(500px,0) rotate(360deg) scale(2);
+            
+        }
+        50%{
+            transform: translate(500px,500px) rotate(0) scale(0.5);
+        }
+        75%{
+            transform: translate(0,500px) rotate(360deg) scale(2);
+        }
+        100%
+        {
+            transform: translate(0,0) rotate(0) scale(0.5);
+        }
+
+
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    animation: move 10s   infinite  alternate;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201909%2F11%2F20190911131339_cZhVH.thumb.700_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640347763&t=53efbe16cf8a53703c0fd3eb27a62b6b"alt="">
+    </div>
+</body>
+</html>
+    

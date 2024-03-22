@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单练习作业</title>
+    <style>
+        div{background-color: rgba(100, 237, 230, 0.507);
+            width: 1300px;
+            border: 5px solid rgba(128, 128, 128, 0.959);
+            padding: 20px;
+            margin: 25px; 
+            height: 1000px;  
+        }
+        h2{text-align: center;}
+        p{ border-bottom: white solid 2px;
+            margin-top: 3px;}
+    </style>
+</head>
+<body>
+    <div>    
+    <h2>大学生暑假社会实践调查问卷</h2>
+    <p>亲爱的同学，你好：<br>为了更好地了解近年大家对计算机专业的看法，希望得到你的配合。祝你生活愉快，谢谢!</p><br>
+    <span> 1.您的性别：</span>男<input name="sex" type="radio" >
+             女<input name="sex" type="radio"> 
+    <br>
+    <br>
+    <span> 2. 您的学校：</span><input type="text">
+    <br>
+    <br>
+    <span>3.您的年级：</span><select name="grade">
+        <option value="00" disabled selected>选择你的年级</option>
+        <option value="01">大一</option>
+        <option value="02">大二</option>
+        <option value="03">大三</option>
+        <option value="04">大四</option>
+    </select> 
+    <br>
+    <br>
+    4. 报考该专业的原因<br> <input type="checkbox" name="reason">自己感兴趣<br>
+                    <input type="checkbox" name="reason"> 将来发展有利<br>
+                    <input type="checkbox" name="reason"> 就业方便<br>       
+                    <input type="checkbox" name="reason"> 适应社会<br>
+                    <input type="checkbox" name="reason"> 老师建议<br>
+                    <input type="checkbox" name="reason"> 学校建议<br>
+                    <input type="checkbox" name="reason"> 其他
+    <br>
+    <br>
+    5. 您对该专业的建议<br>
+    <input type="checkbox" name="suggest">师资力量要改进<br>
+    <input type="checkbox" name="suggest">更加适应社会需要<br>
+    <input type="checkbox" name="suggest">加强专业建设<br>
+    <input type="checkbox" name="suggest">开展更多专业活动
+    <br>
+    <br>
+    6. 您认为该专业学生有必要参加社会实践：<br>
+    <input type="radio" name="join">有必要<br>
+    <input type="radio" name="join">没有必要<br>
+    <input type="radio" name="join">无所谓
+    <br>
+    <br>
+    7. 您的父母是否赞成你读该专业：<br>
+    <input type="radio" name="agree">很赞成<br>
+    <input type="radio" name="agree">一般<br>
+    <input type="radio" name="agree">不知道
+    <br>
+    <br>
+    8. 您对学校的建议：<br>
+    <form>
+        <textarea cols="50" rows="10">请输入你对学校的意见</textarea>
+    </form>
+   
+    <button type="submit">提交答案</button>
+    <button type="reset">清空</button>
+    <p>Made By Healer</p>
+    </div>
+                  
+</body>
+</html>

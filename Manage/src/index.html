@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Manage</title>
+  </head>
+
+  <body>
+    <div id="top"></div>
+    <div id="box">
+      <div class="container">
+        <div class="jumbotron desc">
+          <h1 class="display-4">
+            {{direction}}
+            <img class="rotate img-fluid" src="./img/webpack.svg" alt="" />
+          </h1>
+          <p class="lead">{{description}}</p>
+          <div class="webIcon">
+            <img src="./img/web.svg" alt="" />
+          </div>
+          <hr />
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-toggle="collapse"
+                data-target="#studentInfoList"
+                aria-expanded="false"
+                aria-controls="studentInfoList"
+              >
+                展开/折叠
+              </button>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="输入学号或姓名以查找，支持模糊查询"
+              v-model="input"
+              @keyup.enter="search"
+              aria-label="Text input with segmented dropdown button"
+            />
+            <div class="input-group-append">
+              <button type="button" class="btn btn-info" @click="search">
+                查找
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary dropdown-toggle"
+                id="screenMenu"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                筛选
+              </button>
+              <div class="dropdown-menu" aria-labelledby="screenMenu">
+                <a class="dropdown-item" href="#" @click="all">全部</a>
+                <div class="dropdown-divider"></div>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  v-for="(e, i) in majorList"
+                  :key="i"
+                  @click="searchByMajor(i)"
+                  >{{e}}</a
+                >
+                <div class="dropdown-divider"></div>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  v-for="(e, i) in conditionList"
+                  :key="i + 'uniqueKey'"
+                  @click="searchByCondition(i)"
+                  >{{e}}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse show" id="studentInfoList">
+          <div class="card card-body">
+            <div class="table-responsive">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col" v-for="(th, i) in thList" :key="i">
+                      {{th}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody v-show="!editMode">
+                  <tr
+                    v-for="student in (searching ? searchList : studentList)"
+                    :key="student.regNum"
+                  >
+                    <th scope="row" class="regNumInfo">
+                      <img
+                        class="member"
+                        src="./img/member.svg"
+                        v-if="student.isEliteMenber"
+                        alt=""
+                      />
+                      {{student.regNum}}
+                    </th>
+                    <td class="majorInfo">{{student.major}}</td>
+                    <td class="nameInfo">{{student.name}}</td>
+                    <td class="gradeInfo">
+                      <img
+                        :key="i"
+                        :src="getGradeLevel(score)"
+                        @click="view(i, student.name)"
+                        v-for="(score, i) in student.homeworkScore"
+                        alt=""
+                      />
+                    </td>
+                    <td
+                      class="absenceInfo"
+                      :class="{absent: student.absence > 0}"
+                    >
+                      {{student.absence ? student.absence : '未缺勤'}}
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn btn-warning"
+                        @click="opt(student)"
+                      >
+                        修改
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody v-show="editMode">
+                  <tr>
+                    <td>
+                      <input
+                        :size="tempStudent.regNum && Math.floor(tempStudent.regNum.length / 2)"
+                        type="text"
+                        v-model="tempStudent.regNum"
+                        class="contentCenter form-control"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        :size="tempStudent.major && Math.floor(tempStudent.major.length / 2)"
+                        v-model="tempStudent.major"
+                        class="contentCenter form-control"
+                        type="text"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        :size="tempStudent.name && Math.floor(tempStudent.name.length / 2)"
+                        v-model="tempStudent.name"
+                        class="contentCenter form-control"
+                        type="text"
+                        readonly
+                      />
+                    </td>
+                    <td>
+                      <input
+                        :size="tempStudent.homeworkScore && Math.floor(tempStudent.homeworkScore.length / 3) || 1"
+                        v-model="tempStudent.homeworkScore"
+                        class="contentCenter form-control"
+                        type="text"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        size="1"
+                        v-model="tempStudent.absence"
+                        class="form-control contentCenter"
+                        type="text"
+                      />
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button
+                          type="button"
+                          class="btn btn-success"
+                          @click="submitForm(tempStudent)"
+                        >
+                          提交
+                        </button>
+                        <button
+                          type="button"
+                          @click="unOpt"
+                          class="btn btn-secondary"
+                        >
+                          取消
+                        </button>
+                        <button
+                          type="button"
+                          data-toggle="dropdown"
+                          aria-expanded="false"
+                          class="btn btn-primary dropdown-toggle"
+                        >
+                          更多
+                        </button>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            v-for="(opt, i) in moreOptList"
+                            :key="i"
+                            @click="moreOpt(i)"
+                          >
+                            {{opt}}
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="topBox" v-show="showTopBtn">
+        <a href="#top" class="top" title="返回顶部"
+          ><img src="./img/top.svg" alt="top"
+        /></a>
+      </div>
+      <div
+        class="position-fixed bottom-0 right-0 p-3"
+        style="z-index: 5; right: 0; bottom: 0"
+      >
+        <div
+          id="liveToast"
+          class="toast"
+          :class="{show: toast, hide: !toast}"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+          data-delay="2000"
+        >
+          <div class="toast-header">
+            <strong class="mr-auto">提示</strong>
+            <small>a few seconds ago</small>
+            <button
+              type="button"
+              class="ml-2 mb-1 close"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">{{optRes}}</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
